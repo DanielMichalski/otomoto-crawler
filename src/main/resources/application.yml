@@ -1,0 +1,26 @@
+otomoto:
+  connection:
+    requestMethod: GET
+    userAgent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1
+    contentType: application/x-www-form-urlencoded; charset=utf-8
+    readTimeout: 5000
+  www:
+    searchSiteTemplate:
+      http://otomoto.pl/osobowe/%s/?search[filter_enum_has_vin]=1&search[country]=&page=%d
+  search:
+    pages:
+      fromPageNo: 1
+      toPageNo: 20
+    vehicleMarks:
+      - bmw
+      - mercedes-benz
+      - audi
+      - volkswagen
+      - honda
+      - opel
+
+txt:
+  output:
+    file:
+      path: target/vehicles.txt
+
