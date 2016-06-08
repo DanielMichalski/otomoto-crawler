@@ -26,7 +26,7 @@ public class VehicleAuctionService {
         try {
             Document document = w3cDocument.getDocument(vehicleOfferLink);
             Vehicle vehicle = vehicleMapper.mapToVehicle(document);
-            logger.info("Found vehicle: ", vehicle);
+            logger.info("Found vehicle: " + vehicle);
             return vehicle;
         } catch (Exception e) {
             throw new RuntimeException("Error while getting vehicle description from site: " + e.getMessage(), e);

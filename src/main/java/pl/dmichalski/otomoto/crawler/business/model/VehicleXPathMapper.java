@@ -46,7 +46,8 @@ public class VehicleXPathMapper {
 
     private String evaluateXpathNode(Document doc, String xpath) throws XPathExpressionException {
         XPath xPath = XPathFactory.newInstance().newXPath();
-        return (String) xPath.evaluate(xpath, doc, XPathConstants.STRING);
+        String value = (String) xPath.evaluate(xpath, doc, XPathConstants.STRING);
+        return value != null ? value.trim() : "";
     }
 
     private NodeList evaluateXpathNodes(Document doc, String xpath) throws XPathExpressionException {

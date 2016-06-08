@@ -26,7 +26,7 @@ public class VehicleStorage {
         this.outputFilePath = outputFilePath;
     }
 
-    public void appendLinesToFile(List<String> lines) {
+    public synchronized void appendLinesToFile(List<String> lines) {
         try {
             logger.info("Saving file with vehicles in path: [{}]", outputFilePath);
             createEmptyFileIfNotExists();
